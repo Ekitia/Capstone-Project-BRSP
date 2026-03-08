@@ -1,65 +1,51 @@
-# Study Case_OmicsLite_Week 3
+# Study Case_OmicsLite_Capstone Project
 
-## `Concept Workflow`
-<img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/deg-to-functional-insights-1.webp" />
+## Proses Pengerjaan Analisis Data DEG dari GEO NCBI
+<img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/unnamed.jpg" />
 
-## Topic Week 3: Vaccine HIV
+## Topic Capstone Project: Kondisi Gen Perokok
 ### Tools: GEO, GEO2R, R (R/Rstudio), GO (g:profiler), KEGG 
-Ini adalah pembelajaran berbasis proyek (PBL) di OmicsLite tentang eksplorasi penjelasan dari satu jurnal tentang kasus HIV pada pasien DF, DHF, dan ND.
+Proses tersebut dilakukan dalam mengolah data DEG pada GEO NCBI (GSE40885) dimana hasil akhir diinpretasikan berdasarkan pelatihan yang dipelajari pada Omicslite
 
-### Catatan: DF = Dengue Fever; DHF = Dengue Hemorrhagic Fever; ND: Non-Dengue (normal)
+### Grup yang Digunakan dalam Penelitian: Saline (Sal) dan LPS
 
 ## Langkah-Langkah Analisis GEO / GEO2R
-1. Periksa jurnal yang akan kita eksplorasi (hari ini tentang Vaksin HIV)
-2. Periksa akses untuk GEO2R (terkadang beberapa dataset tidak dapat dieksplorasi secara publik, jadi kita tidak dapat menjalankannya di R) [Link GEO2R](<https://www.ncbi.nlm.nih.gov/geo/geo2r/>)
-3. Setelah itu, periksa dataset (GSE18090), buka situs web analisis GEO2R
-4. Di situs web analisis GEO2R, ​​kita dapat memfilter baris dan kemudian memberi nama, DF dan DHF sebagai "Pasien" dan ND sebagai "Normal"
-5. Periksa opsi analisis di taskbar (di bawah)
+1. Melakukan pengambilan data DEG melalui website GEO NCBI dengan kasus utama berupa gen perokok akut [Link GEO2R](<https://www.ncbi.nlm.nih.gov/geo/geo2r/>)
+3. Dilakukan pemeriksaan dataset (GSE40885), lalu dilakukan analisis data dengan GEO2R di NCBI
+4. Di situs web analisis GEO2R, ​​dapat dilakukan filter baris dan pemberian nama, yaitu pada lokasi pada cairan tubuh (Saline) dan Lipopolisakarida (LPS)
+5. Dilakukan pemeriksaan opsi analisis di taskbar (di bawah)
+<img alt="image" src=https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/543415513-8a183f21-f064-4201-a463-98cd662eb183.png />
 6. Pilih "Opsi", Biasanya secara default opsi sudah dipilih. Tetapi, terapkan "Disediakan oleh Pengirim" di kategori platform (Karena NCBI mungkin menghasilkan beberapa perubahan pada dataset) dan pilih "ya" untuk menerapkan limma.
-<img width="1746" height="512" alt="image" src="https://github.com/user-attachments/assets/8a183f21-f064-4201-a463-98cd662eb183" />
 
+Hasil Akhir:
+<img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-49-19.png" />
 
-7. Menjalankan data ("Reanalyze")
-## The Result
-<img width="1244" height="450" alt="image" src="https://github.com/user-attachments/assets/05915ec2-43c6-47b0-88f7-fda6fc604171" />
+## Langkah-Langkah Analisis GEO dengan RStudio
+1. Melakukan pengambilan data GEO menggunakan package GEOquery sesuai nomor GEO yang telah ditentukan
+2. Membuat grup data sampel berdasarkan lokasi di Saline dan LPS
+3. Membuat sistem matriks data Sampel
+4. Melakukan Analisis Ekspresi Differensial (LIMMA)
+5. Memberi ulang nama gen dari sampel yang telah dianalisis LIMMA
+6. Visualisasi Data DEG (barplot, volcano plot, UMAP, dan lain-lain), serta menyimpan hasil dataset dalam format .csv
 
-9. Kemudian, Anda dapat memilih visualisasi yang lebih baik, seperti plot heatmap dan diagram Venn, untuk DEG (Gen Ekspresi Diferensial)
-10. Pilih "Unduh tabel", output akan menjadi "tsv"
-11. Sebagai tantangan, Anda dapat mengkonversi data ekstensi .tsv menjadi .csv, kemudian mengkonversi dari data di Ms.Excel atau Anda dapat menggunakan basis data SQL. Tetapi dengan cara yang lebih mudah, Anda dapat menggunakan ChatGPT, untuk memfilter 20 gen sampel yang mengalami peningkatan dan penurunan ekspresi dalam dataset (dengan petunjuk)
-12. Setelah mendapatkan 20 DEG yang mengalami penurunan ekspresi dan 20 DEG yang mengalami peningkatan ekspresi, Anda dapat menyalin "Gen Simbol". Biasanya, gen simbol memiliki dua atau lebih gen simbol dengan pembatas "//", Anda dapat menggunakan ChatGPT dengan perintah "Silakan, saring simbol "//" dalam data 20 DEG yang mengalami penurunan dan peningkatan ekspresi, setelah itu, buat data menjadi vertikal"
+Hasil Akhir:
+<img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-52-17.png" />
 
+## Langkah Tambahan untuk Kedua Proses Data Tersebut
+1. Persiapan dan Penyaringan Data (Data Preparation)
+a) Penyaringan DEG: Dari dataset awal, saring 20 gen yang mengalami peningkatan ekspresi (upregulated) dan 20 gen yang mengalami penurunan ekspresi (downregulated). Anda bisa menggunakan bantuan alat seperti ChatGPT (dengan prompt yang sesuai), SQL, atau Microsoft Excel untuk memudahkan konversi (.tsv ke .csv) dan pemfilteran.
+b) Dibersihkan karakter tersebut (misalnya menggunakan ChatGPT) dan susun daftar gen secara vertikal agar siap dianalisis.
 
-## Langkah-Langkah Analisis GO (Gene Ontology)
-1. Kunjungi GO (situs web g:Profiler atau DAVID)
-[Tautan g:Profiler](<https://biit.cs.ut.ee/gprofiler/gost>)
-2. Masukkan daftar gen setelah penyaringan dan buat data vertikal (formulir ChatGPT)
-3. Jalankan analisis
-4. Kunjungi GO-BP, GO-MP, GO-CC. Temukan "Respons imun bawaan", "Respons inflamasi", "Respons terhadap virus", "Proses apoptosis", dll.
-5. Jelajahi analisis lain untuk membuat kesimpulan.
+3. Analisis Gene Ontology (GO)
+a) Input Data: Kunjungi situs web alat analisis GO seperti g:Profiler atau DAVID, lalu masukkan daftar gen vertikal yang sudah disiapkan.
+b) Eksekusi dan Eksplorasi: Jalankan analisis dan periksa hasilnya pada kategori GO-BP (Biological Process), GO-MP (Molecular Function), dan GO-CC (Cellular Component).
+c) Identifikasi Proses: Cari proses biologis utama yang relevan dengan sampel Anda, seperti "Respons imun bawaan", "Respons inflamasi", "Respons terhadap virus", atau "Proses apoptosis", dan eksplorasi hasil lainnya untuk dasar kesimpulan.
 
-### The Result
-<img width="1907" height="1271" alt="image" src="https://github.com/user-attachments/assets/4fad2aef-0837-4afb-a490-c2d51ebf01d2" />
+4. Pemetaan Jalur KEGG (KEGG Pathway Analysis)
+a) Input Terpisah: Buka situs KEGG Mapper dan atur pencarian untuk organisme Homo sapiens. Masukkan data gen yang mengalami penurunan ekspresi terlebih dahulu untuk dianalisis, lalu ulangi proses yang sama secara terpisah untuk gen yang mengalami peningkatan ekspresi.
+b) Evaluasi Jalur: Analisis output jalur yang muncul (misalnya: "Jalur pensinyalan reseptor Toll-like", "Interaksi sitokin-reseptor sitokin", atau "Apoptosis") beserta jumlah gen yang ditemukan di dalamnya.
+Integrasi: Gabungkan temuan jalur KEGG ini dengan hasil analisis GO sebelumnya.
 
-
-## Langkah-Langkah KEGG Pathway
-1. Identifikasi jalur hasil dari pengayaan.
-2. Kunjungi KEGG Mapper [Link KEGG Mapper](<https://www.genome.jp/kegg/mapper/search.html>) (Cari organisme _Homo sapiens_)
-3. Masukkan DEG (satu per satu), misalnya pertama masukkan DEG yang mengalami penurunan ekspresi kemudian analisis, setelah itu masukkan DEG yang mengalami peningkatan ekspresi
-4. Analisis output (“Jalur pensinyalan reseptor Toll-like – 5 gen ditemukan”, “Interaksi sitokin-reseptor sitokin – 7 gen ditemukan”, “Apoptosis – 3 gen ditemukan”), gabungkan dengan hasil dari GO.
-
-### The Result
-<img width="1587" height="1049" alt="image" src="https://github.com/user-attachments/assets/f992f82f-b04d-473a-a8dc-74a979e531d0" />
-<img width="1305" height="775" alt="image" src="https://github.com/user-attachments/assets/57e00331-da4b-4b76-974e-691636e35b19" />
-
-
-## Langkah-Langkah Interpretasi
-1. Masukkan data visualisasi dari GEO2R (R/Rstudio)
-2. Masukkan data daftar, seperti GO-BP, GO-MP, GO-CC.
-3. Masukkan visualisasi data gen jalur.
-4. Buat kesimpulan dengan visualisasi data tersebut.
-
-### The Result
-<img width="601" height="729" alt="image" src="https://github.com/user-attachments/assets/86cac4d7-9bc9-4c82-887d-90d4f563f8f3" />
-
-
-Kamu tinggal eksplorasi dan pakai analisis mu dalam PBL OmicsLite
+5. Interpretasi dan Kesimpulan Akhir
+a) Pengumpulan Visualisasi: Kumpulkan semua data visualisasi yang Anda miliki, yang mencakup: Data visualisasi awal dari GEO2R (menggunakan R/Rstudio), daftar hasil pengayaan dari GO (BP, MP, CC), serta data visualisasi jalur gen dari KEGG.
+b) Penarikan Kesimpulan: Gunakan seluruh kumpulan data dan visualisasi tersebut secara holistik untuk menyusun kesimpulan akhir dari penelitian atau analisis Anda.
