@@ -11,11 +11,11 @@ Proses tersebut dilakukan dalam mengolah data DEG pada GEO NCBI (GSE40885) diman
 
 ## Langkah-Langkah Analisis GEO / GEO2R
 1. Melakukan pengambilan data DEG melalui website GEO NCBI dengan kasus utama berupa gen perokok akut [Link GEO2R](<https://www.ncbi.nlm.nih.gov/geo/geo2r/>)
-3. Dilakukan pemeriksaan dataset (GSE40885), lalu dilakukan analisis data dengan GEO2R di NCBI
-4. Di situs web analisis GEO2R, ​​dapat dilakukan filter baris dan pemberian nama, yaitu pada lokasi pada cairan tubuh (Saline) dan Lipopolisakarida (LPS)
-5. Dilakukan pemeriksaan opsi analisis di taskbar (di bawah)
+2. Dilakukan pemeriksaan dataset (GSE40885), lalu dilakukan analisis data dengan GEO2R di NCBI
+3. Di situs web analisis GEO2R, ​​dapat dilakukan filter baris dan pemberian nama, yaitu pada lokasi pada cairan tubuh (Saline) dan Lipopolisakarida (LPS)
+4. Dilakukan pemeriksaan opsi analisis di taskbar (di bawah)
 <img alt="image" src=https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/543415513-8a183f21-f064-4201-a463-98cd662eb183.png />
-6. Pilih "Opsi", Biasanya secara default opsi sudah dipilih. Tetapi, terapkan "Disediakan oleh Pengirim" di kategori platform (Karena NCBI mungkin menghasilkan beberapa perubahan pada dataset) dan pilih "ya" untuk menerapkan limma.
+5. Pilih "Opsi", Biasanya secara default opsi sudah dipilih. Tetapi, terapkan "Disediakan oleh Pengirim" di kategori platform (Karena NCBI mungkin menghasilkan beberapa perubahan pada dataset) dan pilih "ya" untuk menerapkan limma.
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-49-19.png" />
 
 ## Langkah-Langkah Analisis GEO dengan RStudio
@@ -32,18 +32,18 @@ Proses tersebut dilakukan dalam mengolah data DEG pada GEO NCBI (GSE40885) diman
 a) Penyaringan DEG: Dari dataset awal, saring 20 gen yang mengalami peningkatan ekspresi (upregulated) dan 20 gen yang mengalami penurunan ekspresi (downregulated). Anda bisa menggunakan bantuan alat seperti ChatGPT (dengan prompt yang sesuai), SQL, atau Microsoft Excel untuk memudahkan konversi (.tsv ke .csv) dan pemfilteran. <br>
 b) Dibersihkan karakter tersebut (misalnya menggunakan ChatGPT) dan susun daftar gen secara vertikal agar siap dianalisis. <br>
 
-3. Analisis Gene Ontology (GO) <br>
+2. Analisis Gene Ontology (GO) <br>
 a) Input Data: Kunjungi situs web alat analisis GO seperti g:Profiler atau DAVID, lalu masukkan daftar gen vertikal yang sudah disiapkan. <br>
 b) Eksekusi dan Eksplorasi: Jalankan analisis dan periksa hasilnya pada kategori GO-BP (Biological Process), GO-MP (Molecular Function), dan GO-CC (Cellular Component). <br>
 c) Identifikasi Proses: Cari proses biologis utama yang relevan dengan sampel Anda, seperti "Respons imun bawaan", "Respons inflamasi", "Respons terhadap virus", atau "Proses apoptosis", dan eksplorasi hasil lainnya untuk dasar kesimpulan. <br>
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2022-09-45.png" />
 
-5. Pemetaan Jalur KEGG (KEGG Pathway Analysis) <br>
+3. Pemetaan Jalur KEGG (KEGG Pathway Analysis) <br>
 a) Input Terpisah: Buka situs KEGG Mapper dan atur pencarian untuk organisme Homo sapiens. Masukkan data gen yang mengalami penurunan ekspresi terlebih dahulu untuk dianalisis, lalu ulangi proses yang sama secara terpisah untuk gen yang mengalami peningkatan ekspresi. <br>
 b) Evaluasi Jalur: Analisis output jalur yang muncul (misalnya: "Jalur pensinyalan reseptor Toll-like", "Interaksi sitokin-reseptor sitokin", atau "Apoptosis") beserta jumlah gen yang ditemukan di dalamnya. <br>
 Integrasi: Gabungkan temuan jalur KEGG ini dengan hasil analisis GO sebelumnya. <br>
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2022-32-30.png" />
 
-6. Interpretasi dan Kesimpulan Akhir <br>
+4. Interpretasi dan Kesimpulan Akhir <br>
 a) Pengumpulan Visualisasi: Kumpulkan semua data visualisasi yang dimiliki, yang mencakup: Data visualisasi awal dari GEO2R (menggunakan R/Rstudio), daftar hasil pengayaan dari GO (BP, MP, CC), serta data visualisasi jalur gen dari KEGG.
 b) Penarikan Kesimpulan: Gunakan seluruh kumpulan data dan visualisasi tersebut secara holistik untuk menyusun kesimpulan akhir dari penelitian atau analisis.
