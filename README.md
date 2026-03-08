@@ -44,6 +44,6 @@ b) Evaluasi Jalur: Analisis output jalur yang muncul (misalnya: "Jalur pensinyal
 Integrasi: Gabungkan temuan jalur KEGG ini dengan hasil analisis GO sebelumnya.
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2022-32-30.png" />
 
-6. Interpretasi dan Kesimpulan Akhir
+6. Interpretasi dan Kesimpulan Akhir <br>
 a) Pengumpulan Visualisasi: Kumpulkan semua data visualisasi yang dimiliki, yang mencakup: Data visualisasi awal dari GEO2R (menggunakan R/Rstudio), daftar hasil pengayaan dari GO (BP, MP, CC), serta data visualisasi jalur gen dari KEGG.
 b) Penarikan Kesimpulan: Gunakan seluruh kumpulan data dan visualisasi tersebut secara holistik untuk menyusun kesimpulan akhir dari penelitian atau analisis.
