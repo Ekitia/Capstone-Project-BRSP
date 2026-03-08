@@ -28,17 +28,17 @@ Proses tersebut dilakukan dalam mengolah data DEG pada GEO NCBI (GSE40885) diman
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-52-17.png" />
 
 ## Langkah Tambahan untuk Kedua Proses Data Tersebut
-1. Persiapan dan Penyaringan Data (Data Preparation)
+1. Persiapan dan Penyaringan Data (Data Preparation) <br>
 a) Penyaringan DEG: Dari dataset awal, saring 20 gen yang mengalami peningkatan ekspresi (upregulated) dan 20 gen yang mengalami penurunan ekspresi (downregulated). Anda bisa menggunakan bantuan alat seperti ChatGPT (dengan prompt yang sesuai), SQL, atau Microsoft Excel untuk memudahkan konversi (.tsv ke .csv) dan pemfilteran.
 b) Dibersihkan karakter tersebut (misalnya menggunakan ChatGPT) dan susun daftar gen secara vertikal agar siap dianalisis.
 
-3. Analisis Gene Ontology (GO)
+3. Analisis Gene Ontology (GO) <br>
 a) Input Data: Kunjungi situs web alat analisis GO seperti g:Profiler atau DAVID, lalu masukkan daftar gen vertikal yang sudah disiapkan.
 b) Eksekusi dan Eksplorasi: Jalankan analisis dan periksa hasilnya pada kategori GO-BP (Biological Process), GO-MP (Molecular Function), dan GO-CC (Cellular Component).
 c) Identifikasi Proses: Cari proses biologis utama yang relevan dengan sampel Anda, seperti "Respons imun bawaan", "Respons inflamasi", "Respons terhadap virus", atau "Proses apoptosis", dan eksplorasi hasil lainnya untuk dasar kesimpulan.
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2022-09-45.png" />
 
-5. Pemetaan Jalur KEGG (KEGG Pathway Analysis)
+5. Pemetaan Jalur KEGG (KEGG Pathway Analysis) <br>
 a) Input Terpisah: Buka situs KEGG Mapper dan atur pencarian untuk organisme Homo sapiens. Masukkan data gen yang mengalami penurunan ekspresi terlebih dahulu untuk dianalisis, lalu ulangi proses yang sama secara terpisah untuk gen yang mengalami peningkatan ekspresi.
 b) Evaluasi Jalur: Analisis output jalur yang muncul (misalnya: "Jalur pensinyalan reseptor Toll-like", "Interaksi sitokin-reseptor sitokin", atau "Apoptosis") beserta jumlah gen yang ditemukan di dalamnya.
 Integrasi: Gabungkan temuan jalur KEGG ini dengan hasil analisis GO sebelumnya.
