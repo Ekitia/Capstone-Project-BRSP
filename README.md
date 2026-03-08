@@ -17,6 +17,7 @@ Proses tersebut dilakukan dalam mengolah data DEG pada GEO NCBI (GSE40885) diman
 <img alt="image" src=https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/543415513-8a183f21-f064-4201-a463-98cd662eb183.png />
 6. Pilih "Opsi", Biasanya secara default opsi sudah dipilih. Tetapi, terapkan "Disediakan oleh Pengirim" di kategori platform (Karena NCBI mungkin menghasilkan beberapa perubahan pada dataset) dan pilih "ya" untuk menerapkan limma.
 
+
 Hasil Akhir:
 
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-49-19.png" />
