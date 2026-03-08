@@ -18,6 +18,7 @@ Proses tersebut dilakukan dalam mengolah data DEG pada GEO NCBI (GSE40885) diman
 6. Pilih "Opsi", Biasanya secara default opsi sudah dipilih. Tetapi, terapkan "Disediakan oleh Pengirim" di kategori platform (Karena NCBI mungkin menghasilkan beberapa perubahan pada dataset) dan pilih "ya" untuk menerapkan limma.
 
 Hasil Akhir:
+
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-49-19.png" />
 
 ## Langkah-Langkah Analisis GEO dengan RStudio
