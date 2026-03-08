@@ -36,12 +36,14 @@ b) Dibersihkan karakter tersebut (misalnya menggunakan ChatGPT) dan susun daftar
 a) Input Data: Kunjungi situs web alat analisis GO seperti g:Profiler atau DAVID, lalu masukkan daftar gen vertikal yang sudah disiapkan.
 b) Eksekusi dan Eksplorasi: Jalankan analisis dan periksa hasilnya pada kategori GO-BP (Biological Process), GO-MP (Molecular Function), dan GO-CC (Cellular Component).
 c) Identifikasi Proses: Cari proses biologis utama yang relevan dengan sampel Anda, seperti "Respons imun bawaan", "Respons inflamasi", "Respons terhadap virus", atau "Proses apoptosis", dan eksplorasi hasil lainnya untuk dasar kesimpulan.
+<img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2022-09-45.png" />
 
-4. Pemetaan Jalur KEGG (KEGG Pathway Analysis)
+5. Pemetaan Jalur KEGG (KEGG Pathway Analysis)
 a) Input Terpisah: Buka situs KEGG Mapper dan atur pencarian untuk organisme Homo sapiens. Masukkan data gen yang mengalami penurunan ekspresi terlebih dahulu untuk dianalisis, lalu ulangi proses yang sama secara terpisah untuk gen yang mengalami peningkatan ekspresi.
 b) Evaluasi Jalur: Analisis output jalur yang muncul (misalnya: "Jalur pensinyalan reseptor Toll-like", "Interaksi sitokin-reseptor sitokin", atau "Apoptosis") beserta jumlah gen yang ditemukan di dalamnya.
 Integrasi: Gabungkan temuan jalur KEGG ini dengan hasil analisis GO sebelumnya.
+<img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2022-32-30.png" />
 
-5. Interpretasi dan Kesimpulan Akhir
-a) Pengumpulan Visualisasi: Kumpulkan semua data visualisasi yang Anda miliki, yang mencakup: Data visualisasi awal dari GEO2R (menggunakan R/Rstudio), daftar hasil pengayaan dari GO (BP, MP, CC), serta data visualisasi jalur gen dari KEGG.
-b) Penarikan Kesimpulan: Gunakan seluruh kumpulan data dan visualisasi tersebut secara holistik untuk menyusun kesimpulan akhir dari penelitian atau analisis Anda.
+6. Interpretasi dan Kesimpulan Akhir
+a) Pengumpulan Visualisasi: Kumpulkan semua data visualisasi yang dimiliki, yang mencakup: Data visualisasi awal dari GEO2R (menggunakan R/Rstudio), daftar hasil pengayaan dari GO (BP, MP, CC), serta data visualisasi jalur gen dari KEGG.
+b) Penarikan Kesimpulan: Gunakan seluruh kumpulan data dan visualisasi tersebut secara holistik untuk menyusun kesimpulan akhir dari penelitian atau analisis.
