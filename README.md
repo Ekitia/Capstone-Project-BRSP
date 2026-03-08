@@ -13,7 +13,7 @@ Proses tersebut dilakukan dalam mengolah data DEG pada GEO NCBI (GSE40885) diman
 1. Melakukan pengambilan data DEG melalui website GEO NCBI dengan kasus utama berupa gen perokok akut [Link GEO2R](<https://www.ncbi.nlm.nih.gov/geo/geo2r/>)
 2. Dilakukan pemeriksaan dataset (GSE40885), lalu dilakukan analisis data dengan GEO2R di NCBI
 3. Di situs web analisis GEO2R, ​​dapat dilakukan filter baris dan pemberian nama, yaitu pada lokasi pada cairan tubuh (Saline) dan Lipopolisakarida (LPS)
-4. Dilakukan pemeriksaan opsi analisis di taskbar (di bawah)
+4. Dilakukan pemeriksaan opsi analisis di taskbar (di bawah) <br>
 <img alt="image" src=https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/543415513-8a183f21-f064-4201-a463-98cd662eb183.png />
 5. Pilih "Opsi", Biasanya secara default opsi sudah dipilih. Tetapi, terapkan "Disediakan oleh Pengirim" di kategori platform (Karena NCBI mungkin menghasilkan beberapa perubahan pada dataset) dan pilih "ya" untuk menerapkan limma.
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-49-19.png" />
