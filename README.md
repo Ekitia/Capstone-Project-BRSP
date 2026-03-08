@@ -16,11 +16,8 @@ Proses tersebut dilakukan dalam mengolah data DEG pada GEO NCBI (GSE40885) diman
 5. Dilakukan pemeriksaan opsi analisis di taskbar (di bawah)
 <img alt="image" src=https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/543415513-8a183f21-f064-4201-a463-98cd662eb183.png />
 6. Pilih "Opsi", Biasanya secara default opsi sudah dipilih. Tetapi, terapkan "Disediakan oleh Pengirim" di kategori platform (Karena NCBI mungkin menghasilkan beberapa perubahan pada dataset) dan pilih "ya" untuk menerapkan limma.
-|
-Hasil Akhir:
-
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-49-19.png" />
-|
+
 ## Langkah-Langkah Analisis GEO dengan RStudio
 1. Melakukan pengambilan data GEO menggunakan package GEOquery sesuai nomor GEO yang telah ditentukan
 2. Membuat grup data sampel berdasarkan lokasi di Saline dan LPS
@@ -28,10 +25,8 @@ Hasil Akhir:
 4. Melakukan Analisis Ekspresi Differensial (LIMMA)
 5. Memberi ulang nama gen dari sampel yang telah dianalisis LIMMA
 6. Visualisasi Data DEG (barplot, volcano plot, UMAP, dan lain-lain), serta menyimpan hasil dataset dalam format .csv
-|
-Hasil Akhir:
 <img alt="image" src="https://github.com/Ekitia/Capstone-Project-BRSP/blob/main/Sumber%20Gambar/Screenshot%20from%202026-03-08%2021-52-17.png" />
-|
+
 ## Langkah Tambahan untuk Kedua Proses Data Tersebut
 1. Persiapan dan Penyaringan Data (Data Preparation)
 a) Penyaringan DEG: Dari dataset awal, saring 20 gen yang mengalami peningkatan ekspresi (upregulated) dan 20 gen yang mengalami penurunan ekspresi (downregulated). Anda bisa menggunakan bantuan alat seperti ChatGPT (dengan prompt yang sesuai), SQL, atau Microsoft Excel untuk memudahkan konversi (.tsv ke .csv) dan pemfilteran.
